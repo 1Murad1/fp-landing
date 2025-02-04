@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { BoxIcon } from '../../ui/BoxIcon'
 import { styles } from '../../styles/styles'
 import { IMarqueeData } from '../../types/types'
