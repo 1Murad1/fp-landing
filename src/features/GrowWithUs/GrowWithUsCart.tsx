@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { BoxIcon } from '../../ui/BoxIcon'
 import { IGrowWithUsData } from '../../types/types'
 import { styles } from '../../styles/styles'

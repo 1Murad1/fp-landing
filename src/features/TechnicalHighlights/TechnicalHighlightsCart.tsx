@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { ITechnicalHighlightsData } from '../../types/types';
 import { styles } from '../../styles/styles';
 

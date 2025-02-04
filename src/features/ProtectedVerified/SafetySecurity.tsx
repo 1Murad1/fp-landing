@@ -1,4 +1,3 @@
-import React from 'react'
 import { styles } from '../../styles/styles'
 import { SafetySecurityData } from '../../mockData/mockData'
 import LinkMore from '@/components/ui/LinkMore'
