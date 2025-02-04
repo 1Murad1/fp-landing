@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: 'Jost', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+	background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(149, 16, 165);
+}
+
+.home-page {
+   background-position-y: 45vh;
+   background-size: 100%;
+   @media screen and (max-width: 1324px) {
+     background-position-y: 75vh;
+   }
+    @media screen and (max-width: 767px) {
+     background-position-y: 85vh;
+   }
+}
+.footer-nav-wrapper {
+  .footer-nav {
+    a {
+      font-size: 1.25rem;
+    }
+  }
+}
+.swiper-slide-active .darkened-slide {
+  box-shadow: 0rem 1.5rem 4rem 0rem #00000059;
+}
+
+.swiper-slide:not(.swiper-slide-active) .darkened-slide {
+  filter: blur(0.625rem);
+}
+
+@keyframes gradient-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.darkened-slide {
+  position: relative;
+  border-radius: 1.45rem; 
+}
+
+.animation-border::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  padding: 4px;
+  background: linear-gradient(113.02deg, rgba(69, 17, 65, 0.2), rgba(55, 60, 79, 0.2), rgba(69, 17, 65, 0.8), rgba(55, 60, 79, 0.8));
+  background-size: 300% 300%;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+  transition: .5s all;
+   animation: gradient-border 3s linear infinite;
+   opacity: 0;
+}
+.animation-border:hover::before {
+  opacity: 1;
+}
+
+.darkened-swiper .swiper-pagination-bullet {
+  background-color: #C1CBDC ;
+  opacity: 1;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.darkened-swiper .swiper-pagination-bullet-active {
+
+  position: relative;
+  &:before {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #C1CBDC;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+  }
+}
+.darkened-swiper {
+  &.swiper {
+    
+  padding-bottom: 3rem;
+   .swiper-pagination {
+    display: flex;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    height: 12px;
+  } 
+  }
+ 
+}
+.custom-bg-bottom {
+  background-position: center bottom;
+}
+
+.\[\&\[data-state\=open\]\>svg\]\:rotate-180[data-state=open]>svg  path:first-child{
+  display: none;
+}
+
+.accordeon-header {
+  text-decoration: none !important;
+}
