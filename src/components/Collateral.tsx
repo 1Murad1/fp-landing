@@ -8,7 +8,7 @@ interface CollateralProps {
 export const Collateral: React.FC<CollateralProps> = React.memo(({ customStyle }) => (
 	<div className={`${customStyle}`}>
 		<div className={`${styles.container}`}>
-			<h2 data-aos="fade-up" data-aos-delay="1500" className={`${styles.titleH2}`}><span className='text-darkAccentGreen'>$1.079.801.285</span> of borrowing backed by <br className='sm:hidden lg:block' />
+			<h2 data-aos="fade-up" data-aos-delay="1000" className={`${styles.titleH2}`}><span className='text-darkAccentGreen'>$1.079.801.285</span> of borrowing backed by <br className='sm:hidden lg:block' />
 				<span className='text-darkAccentRed'>$2.107.654.320</span> of collateral across <span className='text-darkAccentRed'>17</span> markets</h2>
 		</div>
 

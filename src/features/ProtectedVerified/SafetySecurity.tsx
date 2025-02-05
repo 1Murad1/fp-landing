@@ -7,7 +7,7 @@ const SafetySecurity = () => {
 		<div className='flex items-stretch justify-between gap-x-3 gap-y-2 sm:flex-col md:flex-row'>
 			{
 				SafetySecurityData?.map((item) => (
-					<Link data-aos='flip-left' data-aos-delay={`${1500 + item.id * 100}`} to={item.link} key={item.id} className={`security-cart-border ${item.id === 1 && 'security-cart-border1'} ${item.id === 2 && 'security-cart-border2'} ${item.id === 3 && 'security-cart-border3'} sm:p-7 lg:p-10 rounded-2xl border-2 border-transparent flex-1 flex flex-col gap-4`}>
+					<Link data-aos='flip-left' data-aos-delay={`${1000 + item.id * 100}`} to={item.link} key={item.id} className={`security-cart-border ${item.id === 1 && 'security-cart-border1'} ${item.id === 2 && 'security-cart-border2'} ${item.id === 3 && 'security-cart-border3'} sm:p-7 lg:p-10 rounded-2xl border-2 border-transparent flex-1 flex flex-col gap-4`}>
 						<span className={`${styles.titleH4} text-white`}>{item.title}</span>
 						<span className='h-[1px] bg-darkGray w-full'></span>
 						<span className={`${styles.baseText} text-darkTextMuted`}>{item.text}</span>

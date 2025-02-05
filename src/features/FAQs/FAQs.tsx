@@ -8,9 +8,9 @@ interface FAQsProps {
 }
 
 export const FAQs: React.FC<FAQsProps> = React.memo(({ customStyle }) => (
-	<div data-aos="zoom-in" data-aos-delay="1500" id='faq' className={`${customStyle}`}>
+	<div data-aos="zoom-in" data-aos-delay="1000" id='faq' className={`${customStyle}`}>
 		<div className={`${styles.container} flex items-start justify-between gap-x-6 sm:flex-col lg:flex-row`}>
-			<div data-aos="flip-up" data-aos-delay="1500" className='flex sm:items-center lg:items-start sm:w-full lg:w-auto justify-between lg:flex-col gap-7'>
+			<div data-aos="flip-up" data-aos-delay="1100" className='flex sm:items-center lg:items-start sm:w-full lg:w-auto justify-between lg:flex-col gap-7'>
 				<h3 className={`${styles.titleH3}`}>FAQs</h3>
 				<Button customStyle={`${styles.buttonStyleBase} sm:hidden xs:flex group flex items-center gap-x-3 px-6 py-4`} variant='primary' link={false} type="button">
 					See all answer

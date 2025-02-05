@@ -8,7 +8,7 @@ interface IJoinLqgProps {
 }
 
 export const JoinLqg: FC<IJoinLqgProps> = React.memo(({ customStyle }) => (
-	<div data-aos="zoom-in" data-aos-delay="1500" className={`${customStyle}`}>
+	<div data-aos="zoom-in" data-aos-delay="0" className={`${customStyle}`}>
 		<div className={`${styles.container} flex flex-col items-center justify-center gap-y-9`}>
 			<h2 className={`${styles.titleH1}`}>Join the LQG</h2>
 			<LiquidityInfo text='$34.95 billion of liquidity currently supplied.' />

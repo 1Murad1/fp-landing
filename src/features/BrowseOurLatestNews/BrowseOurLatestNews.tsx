@@ -10,7 +10,7 @@ interface IBrowseOurLatestNewsProps {
 export const BrowseOurLatestNews: FC<IBrowseOurLatestNewsProps> = React.memo(({ customStyle }) => (
 	<div className={`${customStyle}`}>
 		<div className={`${styles.container}`}>
-			<h3 data-aos="fade-right" data-aos-delay="1500" className={`${styles.titleH3} mb-4`}>Browse our latest news</h3>
+			<h3 data-aos="fade-right" data-aos-delay="1000" className={`${styles.titleH3} mb-4`}>Browse our latest news</h3>
 			<div className='flex items-start justify-between gap-x-3 sm:mb-7 lg:mb-10'>
 				<p data-aos="fade-right" data-aos-delay="1600" className={`${styles.baseText} text-darkTextMuted max-w-5xl w-full`}>Dive deep into our collection of articles, stories, and updates on all things Grass. Whether you’re looking for industry trends, company updates, or behind-the-scenes glimpses, our blog offers a wealth of knowledge to feed your curiosity.</p>
 				<Button customStyle={`${styles.buttonStyleBase} sm:hidden xs:flex group px-6 py-4 flex items-center gap-x-3 whitespace-nowrap`} variant='primary' link={false} type="button">View all articles <svg className='group-hover:rotate-45 group-hover:translate-x-1 transition-all' width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -15,7 +15,7 @@ interface GrowWithUsCartProps {
 
 const GrowWithUsCart: FC<GrowWithUsCartProps> = ({ customStyle, type, variant, item }) => {
 	return (
-		<div data-aos="fade-up" data-aos-delay={`${1500 + item.id * 100}`} className={`${customStyle} growWithUsCartBorder rounded-2xl border-2 border-transparent ${type === 'primary' ? 'sm:p-7 lg:p-10 flex flex-col justify-between gap-y-4' : ''} ${variant === 'big' ? 'sm:w-full md:w-1/2-custom md:h-96' : 'sm:w-full md:w-1/3-custom'}`}>
+		<div data-aos="fade-up" data-aos-delay={`${1000 + item.id * 100}`} className={`${customStyle} growWithUsCartBorder rounded-2xl border-2 border-transparent ${type === 'primary' ? 'sm:p-7 lg:p-10 flex flex-col justify-between gap-y-4' : ''} ${variant === 'big' ? 'sm:w-full md:w-1/2-custom md:h-96' : 'sm:w-full md:w-1/3-custom'}`}>
 			<div className='flex justify-end'>
 				<BoxIcon customStyle='shadow-[0px_14px_24px_0px_rgba(0,0,0,0.25)] rounded-[1.25rem] bg-darkBgPrimary'>
 					<img src={item.icon} alt="icon" />

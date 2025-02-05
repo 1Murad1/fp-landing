@@ -15,7 +15,7 @@ export const LiquidityRewardsHub: React.FC<LiquidityRewardsHubProps> = React.mem
 			<p data-aos="fade-right" className={`${styles.baseText} text-darkTextMuted`}>Replace First liquidity platform to earn rewards from your memecoins</p>
 		</div>
 		<CustomMarquee customStyle='mb-3' />
-		<div data-aos="fade-up" data-aos-delay="1500" className={`${styles.container} flex justify-between items-stretch gap-3 sm:flex-col md:flex-row`}>
+		<div data-aos="fade-up" data-aos-delay="1000" className={`${styles.container} flex justify-between items-stretch gap-3 sm:flex-col md:flex-row`}>
 			{
 				LiquidityCartData?.map((item) => (
 					<LiquidityCart key={item.id} item={item} customStyle='flex-1' />
