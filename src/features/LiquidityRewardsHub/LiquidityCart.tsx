@@ -12,7 +12,7 @@ const LiquidityCart: React.FC<ILiquidityCartDataProps> = ({ item, customStyle })
 
 	return (
 		<div
-			className={`animated-border-card p-10 bg-black7-30 flex flex-col border-2 border-black gap-4 rounded-2xl ${customStyle}`}
+			className={`animated-border-card p-10 bg-bgDark flex flex-col border-2 border-transparent gap-4 rounded-2xl ${customStyle}`}
 		>
 			<p className={`${styles.titleH4} text-white`}>{item.title}</p>
 			<div className='w-full h-[1px] bg-darkGray' />

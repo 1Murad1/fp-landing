@@ -13,9 +13,9 @@ interface ButtonProps {
 
 export const Button: React.FC<PropsWithChildren<ButtonProps>> = React.memo(({ customStyle, type, variant, link, path, children }) => (
 	link ? (
-		<Link to={path || ''} className={`${customStyle} ${variant === 'primary' ? 'bg-darkAccentBlue hover:bg-darkBgSecondary' : 'bg-darkBgSecondary hover:bg-darkAccentBlue'}`}>{children}</Link>
+		<Link data-aos="zoom-in" to={path || ''} className={`${customStyle} ${variant === 'primary' ? 'bg-darkAccentBlue hover:bg-darkBgSecondary' : 'bg-darkBgSecondary hover:bg-darkAccentBlue'}`}>{children}</Link>
 	) : (
-		<button type={type} className={`${customStyle} ${variant === 'primary' ? 'bg-darkAccentBlue hover:bg-darkBgSecondary' : 'bg-darkBgSecondary hover:bg-darkAccentBlue'}`}>{children}</button>
+		<button data-aos="zoom-in" type={type} className={`${customStyle} ${variant === 'primary' ? 'bg-darkAccentBlue hover:bg-darkBgSecondary' : 'bg-darkBgSecondary hover:bg-darkAccentBlue'}`}>{children}</button>
 	)
 ))
 

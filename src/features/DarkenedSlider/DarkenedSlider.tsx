@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react'; // Не нужно импортировать SwiperRef
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
 import 'swiper/css/bundle';
-import { DarkenedSliderData } from '../../mockData/mockData';
 import { useIsMobile } from '@/hooks/useMobile';
+import { DarkenedSliderData } from '@/mockData/mockData';
 
 interface IDarkenedSliderData {
 	customStyle?: string;
@@ -32,12 +32,18 @@ export const DarkenedSwiper: React.FC<IDarkenedSliderData> = React.memo(({ custo
 	return (
 		<div className={`swiper-container ${customStyle}`}>
 			<Swiper
+				data-aos="zoom-in"
+				data-aos-delay="600"
 				ref={swiperRef}
 				effect={'coverflow'}
 				grabCursor={true}
 				centeredSlides={true}
 				slidesPerView={isTablet ? 1.3 : 1.7}
 				initialSlide={middleIndex}
+				autoplay={{
+					delay: 20000,
+					disableOnInteraction: false,
+				}}
 				coverflowEffect={{
 					rotate: 0,
 					stretch: 0,
@@ -46,9 +52,10 @@ export const DarkenedSwiper: React.FC<IDarkenedSliderData> = React.memo(({ custo
 					slideShadows: false,
 				}}
 				pagination={{
+					clickable: true,
 					dynamicBullets: true,
 				}}
-				modules={[EffectCoverflow, Pagination]}
+				modules={[EffectCoverflow, Pagination, Autoplay]}
 				className="darkened-swiper"
 			>
 				{DarkenedSliderData.map((slide) => (

@@ -5,11 +5,13 @@ import { NavigationLink } from '../ui/NavigationLink';
 interface NavigationProps {
 	customStyle?: string
 	navigationData: INavigationData[]
+	isMob?: boolean
+	handleClose?: () => void
 }
 
-export const Navigation: React.FC<NavigationProps> = React.memo(({ customStyle, navigationData }) => (
-	<div className={`${customStyle} flex items-center`}>
-		{navigationData.map(({ id, path, label }) => <NavigationLink key={id} path={path} label={label} />)}
+export const Navigation: React.FC<NavigationProps> = React.memo(({ customStyle, navigationData, isMob, handleClose }) => (
+	<div data-aos="fade-left" className={`${customStyle} flex items-center`}>
+		{navigationData.map(({ id, path, label }) => <NavigationLink handleClose={handleClose} isMob={isMob} key={id} path={path} label={label} />)}
 	</div>
 ))
 

@@ -1,8 +1,8 @@
 import Marquee from "react-fast-marquee";
 import MarqueeComponent from './MarqueeComponent';
-import { MarqueeData } from '../../mockData/mockData';
 import { BreakpointConfig } from "@/types/types";
 import { useBreakpoint } from "@/hooks/useBreakpoint";
+import { MarqueeData } from "@/mockData/mockData";
 
 interface CustomMarqueeProps {
 	customStyle?: string
@@ -16,8 +16,8 @@ const DEFAULT_BREAKPOINTS: BreakpointConfig = {
 const CustomMarquee: React.FC<CustomMarqueeProps> = ({ customStyle, breakpoints = DEFAULT_BREAKPOINTS }) => {
 	const gradientWidth = useBreakpoint(breakpoints);
 	return (
-		<div className={`${customStyle}`}>
-			<Marquee autoFill gradient={true} gradientColor="#000" gradientWidth={gradientWidth} >
+		<div data-aos="flip-right" className={`${customStyle}`}>
+			<Marquee autoFill gradient={true} pauseOnHover={true} gradientColor="#000" gradientWidth={gradientWidth} >
 				{
 					MarqueeData?.map((item) => (
 						<MarqueeComponent key={item.id} item={item} />

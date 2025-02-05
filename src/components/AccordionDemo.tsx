@@ -1,9 +1,9 @@
 import {
 	Accordion,
 } from "@/components/ui/accordion"
-import { AccordionData } from "@/mockData/mockData"
 import React, { FC } from "react"
 import AccordionDemoItem from "./ui/AccordionDemoItem"
+import { AccordionData } from "@/mockData/mockData"
 
 interface AccordionDemoProps {
 	customStyle?: string

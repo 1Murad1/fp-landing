@@ -7,7 +7,7 @@ export interface LogoProps {
 }
 
 export const Logo: React.FC<LogoProps> = React.memo(({ customStyle }) => (
-	<Link to='/' className={`${customStyle} flex`}>
+	<Link data-aos="zoom-in" to='/' className={`${customStyle} flex`}>
 		<img src={LogoImage} alt="logo" />
 	</Link>
 ))

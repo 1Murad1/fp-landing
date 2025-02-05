@@ -64,7 +64,7 @@ export interface ILatestNewsData {
 
 export interface ISocialMediaData {
 	id: number,
-	icon: string
+	icon: React.ReactNode
 	link: string
 	linkText: string
 }

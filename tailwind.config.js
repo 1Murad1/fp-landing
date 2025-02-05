@@ -16,6 +16,7 @@ export default {
     			white: '#FFFFFF',
     			gray: '#ABAEB6',
     			darkGray: '#2E2E2F',
+					bgDark: '#0A0A0A',
     			darkAccentBlue: '#4422EF',
     			darkTextLink: '#7C8FFF',
     			darkAccentRed: '#FF4D00',
@@ -23,6 +24,7 @@ export default {
     			darkTextMuted: '#707277',
     			darkBgPrimary: '#1D1C30',
     			darkBgSecondary: '#1A1B1D',
+					'violet':'rgb(149, 16, 165)',
     			bulletPrimary: '#C1CBDC',
     			background: 'hsl(var(--background))',
     			foreground: 'hsl(var(--foreground))',
@@ -77,7 +79,9 @@ export default {
     			'black-40-alt': 'rgba(9, 9, 9, 0.4)',
     			'black-30-alt': 'rgba(4, 4, 4, 0.3)',
     			'black-40-cart': 'rgba(6, 5, 5, 0.4)',
-    			'dark-gradient': 'linear-gradient(180deg, #141416 0%, #000000 100%)'
+    			'dark-gradient': 'linear-gradient(180deg, #141416 0%, #000000 100%)',
+					'custom-gradient': 'linear-gradient(109.33% 196.79% at -16.9% 5%, #111111 0%, #381140 100%)'
+
     		},
     		fontFamily: {
     			jost: [
