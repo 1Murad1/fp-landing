@@ -47,11 +47,11 @@ export const Footer: React.FC<FooterProps> = React.memo(({ customStyle }) => (
 			<div className='flex items-center justify-between gap-x-6 gap-y-7 sm:flex-col md:flex-row'>
 				<p className={`${styles.baseText} text-darkTextMuted text-center`}>Copyright © 2010 - 2025 · All rights reserved</p>
 				<div className='flex items-center gap-x-5 flex-wrap justify-center gap-y-7'>
-					<Link to='support' className={`${styles.baseText} text-darkTextMuted cursor-pointer`}>Support</Link>
+					<Link to='support' className={`${styles.baseText} transition-all duration-300 hover:text-white  text-darkTextMuted cursor-pointer`}>Support</Link>
+					<span className='w-[1px] h-5  bg-darkTextMuted'></span>
+					<Link to='privacy-policy' className={`${styles.baseText} transition-all duration-300 hover:text-white text-darkTextMuted cursor-pointer`}>Privacy Policy</Link>
 					<span className='w-[1px] h-5 bg-darkTextMuted'></span>
-					<Link to='privacy-policy' className={`${styles.baseText} text-darkTextMuted cursor-pointer`}>Privacy Policy</Link>
-					<span className='w-[1px] h-5 bg-darkTextMuted'></span>
-					<Link to='terms-of-service' className={`${styles.baseText} text-darkTextMuted cursor-pointer`}>Terms of Service</Link>
+					<Link to='terms-of-service' className={`${styles.baseText} transition-all duration-300 hover:text-white text-darkTextMuted cursor-pointer`}>Terms of Service</Link>
 				</div>
 			</div>
 		</div>

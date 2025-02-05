@@ -16,8 +16,8 @@ const DEFAULT_BREAKPOINTS: BreakpointConfig = {
 const CustomMarquee: React.FC<CustomMarqueeProps> = ({ customStyle, breakpoints = DEFAULT_BREAKPOINTS }) => {
 	const gradientWidth = useBreakpoint(breakpoints);
 	return (
-		<div data-aos="flip-right" className={`${customStyle}`}>
-			<Marquee autoFill gradient={true} pauseOnHover={true} gradientColor="#000" gradientWidth={gradientWidth} >
+		<div className={`${customStyle}`}>
+			<Marquee autoFill gradient={true} speed={50} pauseOnHover={true} gradientColor="#000" gradientWidth={gradientWidth} >
 				{
 					MarqueeData?.map((item) => (
 						<MarqueeComponent key={item.id} item={item} />

@@ -36,7 +36,7 @@ export interface ITechnicalHighlightsData {
 
 export interface IAuditorsData {
 	id: number,
-	icon: string
+	icon: React.ReactNode
 }
 
 export interface ISafetySecurityData {

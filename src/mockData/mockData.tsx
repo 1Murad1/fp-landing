@@ -11,14 +11,14 @@ import DogeIcon from '../assets/icons/doge.svg'
 import WalletIcon from '../assets/icons/wallet-money.svg';
 import GraphNewUp from '../assets/icons/graph-new-up.svg';
 import WidgetIcon from '../assets/icons/widget.svg';
-import Certora from '../assets/icons/certora.svg'
-import Spearbit from '../assets/icons/spearbit.svg'
 import NewCartImage1 from '../assets/newCartImage1.png'
 import NewCartImage2 from '../assets/newCartImage2.png'
 import NewCartImage3 from '../assets/newCartImage3.png'
 import TwitterIcon from '@/components/svg/TwitterIcon'
 import TelegramIcon from '@/components/svg/TelegramIcon'
 import DiscordIcon from '@/components/svg/DiscordIcon'
+import CertoraIcon from '@/components/svg/CertoraIcon'
+import SpearbitIcon from '@/components/svg/SpearbitIcon'
 
 
 export const DarkenedSliderData: IDarkenedSliderData[] = [
@@ -156,11 +156,11 @@ export const TechnicalHighlightsData: ITechnicalHighlightsData[] = [
 export const AuditorsData: IAuditorsData[] = [
 	{
 		id: 1,
-		icon: Certora
+		icon: <CertoraIcon fill='group-hover:fill-violet transition-all duration-300' stroke="group-hover:stroke-violet transition-all duration-300" />
 	},
 	{
 		id: 2,
-		icon: Spearbit
+		icon: <SpearbitIcon fill='group-hover:fill-violet transition-all duration-300' />
 	},
 ]
 
