@@ -8,7 +8,7 @@ interface CertoraIconProps {
 const CertoraIcon: React.FC<CertoraIconProps> = ({ fill, stroke }) => {
 	return (
 		<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<g clip-path="url(#clip0_1182_16581)">
+			<g clipPath="url(#clip0_1182_16581)">
 				<mask id="mask0_1182_16581" maskUnits="userSpaceOnUse" x="0" y="1" width="200" height="59">
 					<path d="M200 1.02344H0V59.2277H200V1.02344Z" fill="white" />
 				</mask>

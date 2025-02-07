@@ -23,6 +23,7 @@ export default {
     			darkAccentGreen: '#BCFE2F',
     			darkTextMuted: '#707277',
     			darkBgPrimary: '#1D1C30',
+    			lightBgPrimary: '#2A2942',
     			darkBgSecondary: '#1A1B1D',
 					'violet':'rgb(149, 16, 165)',
     			bulletPrimary: '#C1CBDC',

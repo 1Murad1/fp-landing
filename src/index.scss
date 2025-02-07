@@ -149,77 +149,12 @@ body {
     height: 24px;
   }
 }
-.animated-border-card {
-   background: linear-gradient(#0A0A0A, #0A0A0A 0) padding-box, radial-gradient(42.82% 77.08% at 50% 29.17%, #BE55D1 0%, #6A1B79 31.67%, #090909 100%) border-box;
-}
-.growWithUsCartBorder {
-  background:  linear-gradient(#0A0A0A, #0A0A0A) padding-box, 
-  radial-gradient(42.82% 77.08% at 50% 29.17%, #A972B3 0%, #2F0F35 27.5%, #111111 100%) border-box;
-}
-
-.growWithUsBigCartBorder {
-  background: linear-gradient(#0A0A0A, #0A0A0A) padding-box, 
-  radial-gradient(68.27% 122.89% at -16.59% 96.67%, #E984FB 0%, #5C2267 40.65%, #111111 100%) border-box;
-  transition: background 0.5s ease-in-out;
-  &:hover {
-    background: linear-gradient(#0A0A0A, #0A0A0A) padding-box, 
-    radial-gradient(68.27% 122.89% at -16.59% 3.33%, #E984FB 0%, #5C2267 40.65%, #111111 100%) border-box;
-  }
-}
-
-.border-gradient-technical {
-  transition: background 0.5s ease-in-out;
-  &.border-gradient-technical1 {
-    background: linear-gradient(#111111, #111111) padding-box, 
-    radial-gradient(68.27% 122.89% at -16.59% 96.67%, #E984FB 0%, #5C2267 40.65%, #111111 100%) border-box;
-  }
-  &.border-gradient-technical2 {
-    background: linear-gradient(#111111, #111111) padding-box, 
-    radial-gradient(109.33% 196.79% at -16.9% 5%, #111111 0%, #381140 100%) border-box;
-  }
-  &.border-gradient-technical3 {
-    background: linear-gradient(#111111, #111111) padding-box, 
-    radial-gradient(109.33% 196.79% at -16.9% 5%, #381140 0%, #111111 100%) border-box;
-  }
-}
 
 .auditors-border {
   background: linear-gradient(#090909, #090909) padding-box, 
   radial-gradient(42.82% 77.08% at 50% 29.17%, #BE55D1 0%, #6A1B79 31.67%, #090909 100%) border-box;
 }
 
-.security-cart-border {
-  transition: background 0.5s ease-in-out;
- &.security-cart-border1 {
-  background: linear-gradient(#090909, #090909) padding-box,
-    radial-gradient(37.26% 67.06% at 27.08% 12.1%, #BE55D1 0%, #6A1B79 31.67%, #090909 100%) border-box;
-
-  &:hover {
-    background: linear-gradient(#090909, #090909) padding-box,
-      radial-gradient(37.26% 67.06% at 72.92% 87.9%, #BE55D1 0%, #6A1B79 31.67%, #090909 100%) border-box;
-  }
-}
-
-&.security-cart-border2 {
-  background: linear-gradient(#090909, #090909) padding-box,
-    radial-gradient(42.82% 77.08% at 50% 29.17%, #BE55D1 0%, #6A1B79 31.67%, #090909 100%) border-box;
-
-  &:hover {
-    background: linear-gradient(#090909, #090909) padding-box,
-      radial-gradient(42.82% 77.08% at 50% 70.83%, #BE55D1 0%, #6A1B79 31.67%, #090909 100%) border-box;
-  }
-}
-
-&.security-cart-border3 {
-  background: linear-gradient(#090909, #090909) padding-box,
-    radial-gradient(29.86% 52.18% at 76.62% 24.01%, #BE55D1 0%, #6A1B79 31.67%, #090909 100%) border-box;
-
-  &:hover {
-    background: linear-gradient(#090909, #090909) padding-box,
-      radial-gradient(29.86% 52.18% at 23.38% 75.99%, #BE55D1 0%, #6A1B79 31.67%, #090909 100%) border-box;
-  }
-}
-}
 
 .browse-cart-border {
   background: linear-gradient(rgba(9, 9, 9, 0.4), rgba(9, 9, 9, 0.4)) padding-box,
