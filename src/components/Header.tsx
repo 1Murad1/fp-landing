@@ -16,7 +16,7 @@ interface HeaderProps {
 const navigationData: INavigationData[] = [
 	{
 		id: 1,
-		path: '/#faq',
+		path: '/faq',
 		label: 'FAQ'
 	},
 	{

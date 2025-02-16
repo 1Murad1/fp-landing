@@ -6,7 +6,10 @@ export interface INavigationData {
 
 export interface IDarkenedSliderData {
 	id: number,
-	url: string
+	imageDesktop: string
+	imageMobile: string
+	tabTitle: string
+	tabText: string
 }
 
 export interface IMarqueeData {
@@ -47,13 +50,27 @@ export interface ISafetySecurityData {
 	link: string
 }
 
-export interface IAccordionData {
+export interface IAccordionData { 
+
 	id: number,
 	title: string
 	text: string
 }
 
 export interface ILatestNewsData {
+	id: number,
+	title: string
+	text: string
+	linkText: string
+	link: string
+	image: string
+}
+
+export interface IBlogCartData extends ILatestNewsData {
+	date: string
+}
+
+export interface IAboutNewsData {
 	id: number,
 	title: string
 	text: string
@@ -77,3 +94,45 @@ export type BreakpointValues = {
 export type BreakpointConfig = {
   [key: string]: BreakpointValues;
 };
+
+export interface ISidebarData {
+	id: number,
+	title: string,
+	anchor: string
+}
+
+export interface IFaqCategoryData {
+  id: string;
+  title: string;
+  accordionData: IAccordionData[];
+}
+
+export interface IBaseCartItem {
+	id: number;
+	link: string;
+}
+
+export interface ISupportCartItem extends IBaseCartItem {
+  title: string;
+  text: string;
+  linkText: string;
+}
+
+export interface IGuidesCartItem extends IBaseCartItem {
+	title: string;
+	text: string;
+	icon: React.ReactNode
+}
+
+
+export interface IArticlesCartItem extends IBaseCartItem {
+	title: string;
+	text: string;
+}
+
+export interface IArticlesPageData {
+	id: number,
+	idSection: string,
+	title: string,
+	text: string
+}

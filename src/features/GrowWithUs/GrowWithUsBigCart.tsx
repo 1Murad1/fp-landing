@@ -12,7 +12,7 @@ const GrowWithUsBigCart: React.FC = () => {
 				'radial-gradient(circle at 50% 50%, rgba(169, 114, 179, 0.8) 0%, rgba(47, 15, 53, 0.4) 30%, transparent 70%)',
 		})
 	return (
-		<div className='relative sm:w-full md:w-1/2-custom'>
+		<div className='relative sm:w-full md:w-1/2-custom' data-aos="fade-up" data-aos-delay={`${500 + 4 * 100}`}>
 			<div
 				className={`absolute inset-0 rounded-2xl transition-opacity duration-300 pointer-events-none ${isHovered ? 'opacity-100' : 'opacity-0'}`}
 				style={{

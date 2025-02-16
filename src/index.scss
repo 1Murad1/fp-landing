@@ -20,7 +20,10 @@ body {
 ::-webkit-scrollbar-thumb {
   background: rgb(149, 16, 165);
 }
-
+[data-aos] {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
 .home-page {
    background-position-y: 45vh;
    background-size: 100%;
@@ -165,6 +168,32 @@ body {
   }
 }
 
+
+.swiper-wrapper {
+  align-items: stretch;
+}
+.activeLink {
+  span {
+    transform: scaleX(1) translateX(-50%);
+    background: #FF4D00;
+  }
+}
+.slider-about {
+  .swiper-wrapper {
+    .swiper-slide {
+      height: auto ;
+    }
+  }
+}
+.about-new-cart-border {
+  background: linear-gradient(rgba(9, 9, 9, 0.4), rgba(9, 9, 9, 0.4)) padding-box,
+  radial-gradient(42.82% 77.08% at 50% 29.17%, rgba(169, 114, 179, 0.6) 0%, rgba(47, 15, 53, 0.6) 27.5%, rgba(17, 17, 17, 0.6) 100%) border-box;
+  &:hover {
+    background: linear-gradient(rgba(9, 9, 9, 0.4), rgba(9, 9, 9, 0.8)) padding-box,
+    radial-gradient(42.82% 77.08% at 50% 29.17%, rgba(169, 114, 179, 0.6) 0%, rgba(47, 15, 53, 0.6) 27.5%, rgba(17, 17, 17, 0.6) 100%) border-box;
+  }
+}
+
 .subscribe-cart-border {
   background: linear-gradient(rgba(4, 4, 4, 1), rgba(4, 4, 4, 1)) padding-box,
   radial-gradient(42.82% 77.08% at 50% 29.17%, #A972B3 0%, #2F0F35 27.5%, #111111 100%) border-box;
@@ -175,7 +204,27 @@ body {
   }
 }
 
+.subscribe-modal {
+  box-shadow: 0px 20px 70px 0px #00000066;
+  background: #141416;
+}
 
+.faq-page {
+  .faq-accordion {
+    & > div {
+      padding-right: 0;
+      padding-left: 0;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      h3 {
+        & > button {
+          padding-top: 12px;
+          padding-bottom: 12px;
+        }
+      }
+    }
+  }
+}
 
 @media screen and (max-height: 1000px) {
   .first-block {

@@ -24,7 +24,7 @@ const GrowWithUsCart: FC<GrowWithUsCartProps> = ({ customStyle, type, variant, i
 		})
 
 	return (
-		<div className={`relative ${variant === 'big' ? 'sm:w-full md:w-1/2-custom md:h-96' : 'sm:w-full md:w-1/3-custom'}`} data-aos="fade-up" data-aos-delay={`${1000 + item.id * 100}`}>
+		<div className={`relative ${variant === 'big' ? 'sm:w-full md:w-1/2-custom md:h-96' : 'sm:w-full md:w-1/3-custom'}`} data-aos="fade-up" data-aos-delay={`${500 + item.id * 100}`}>
 			<div
 				className={`absolute inset-0 rounded-2xl transition-opacity duration-300 pointer-events-none ${isHovered ? 'opacity-100' : 'opacity-0'}`}
 				style={{
@@ -40,7 +40,7 @@ const GrowWithUsCart: FC<GrowWithUsCartProps> = ({ customStyle, type, variant, i
 				style={gradientStyle}
 			>
 				<div className='flex justify-end'>
-					<BoxIcon customStyle='shadow-[0px_14px_24px_0px_rgba(0,0,0,0.25)] transition-all duration-300 rounded-[1.25rem] bg-darkBgPrimary hover:bg-lightBgPrimary'>
+					<BoxIcon customStyle='shadow-[0px_14px_24px_0px_rgba(0,0,0,0.25)] size-20 transition-all duration-300 rounded-[1.25rem] bg-darkBgPrimary hover:bg-lightBgPrimary'>
 						<img src={item.icon} alt="icon" />
 					</BoxIcon>
 				</div>

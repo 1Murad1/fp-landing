@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 import { styles } from '@/styles/styles'
 import { Link } from 'react-router-dom'
 

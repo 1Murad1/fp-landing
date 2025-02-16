@@ -2,15 +2,16 @@ import React from 'react'
 import { AccordionDemo } from '../../components/AccordionDemo';
 import { styles } from '@/styles/styles';
 import { Button } from '@/ui/Button';
+import { AccordionData } from "@/mockData/mockData"
 
 interface FAQsProps {
 	customStyle?: string
 }
 
 export const FAQs: React.FC<FAQsProps> = React.memo(({ customStyle }) => (
-	<div data-aos="zoom-in" data-aos-delay="1000" id='faq' className={`${customStyle}`}>
+	<div data-aos="zoom-in" data-aos-delay="500" id='faq' className={`${customStyle}`}>
 		<div className={`${styles.container} flex items-start justify-between gap-x-6 sm:flex-col lg:flex-row`}>
-			<div data-aos="flip-up" data-aos-delay="1100" className='flex sm:items-center lg:items-start sm:w-full lg:w-auto justify-between lg:flex-col gap-7'>
+			<div data-aos="flip-up" data-aos-delay="600" className='flex sm:items-center lg:items-start sm:w-full lg:w-auto justify-between lg:flex-col gap-7'>
 				<h3 className={`${styles.titleH3}`}>FAQs</h3>
 				<Button customStyle={`${styles.buttonStyleBase} sm:hidden xs:flex group flex items-center gap-x-3 px-6 py-4`} variant='primary' link={false} type="button">
 					See all answer
@@ -19,7 +20,7 @@ export const FAQs: React.FC<FAQsProps> = React.memo(({ customStyle }) => (
 					</svg>
 				</Button>
 			</div>
-			<AccordionDemo customStyle='sm:max-w-full lg:max-w-[47.8125rem]' />
+			<AccordionDemo variant='block' data={AccordionData} customStyle='sm:max-w-full lg:max-w-[47.8125rem]' />
 			<Button customStyle={`${styles.buttonStyleBase} xs:hidden mt-9 group flex items-center gap-x-3 px-6 py-4`} variant='primary' link={false} type="button">
 				See all answer
 				<svg className='group-hover:rotate-45 group-hover:translate-x-1 transition-all' width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">

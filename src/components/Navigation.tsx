@@ -10,7 +10,7 @@ interface NavigationProps {
 }
 
 export const Navigation: React.FC<NavigationProps> = React.memo(({ customStyle, navigationData, isMob, handleClose }) => (
-	<div data-aos="fade-left" className={`${customStyle} flex items-center`}>
+	<div data-aos="fade-up" className={`${customStyle} flex items-center`}>
 		{navigationData.map(({ id, path, label }) => <NavigationLink handleClose={handleClose} isMob={isMob} key={id} path={path} label={label} />)}
 	</div>
 ))

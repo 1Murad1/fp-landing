@@ -8,6 +8,6 @@ export const styles = {
 	titleH4: 'text-white sm:text-[1.125rem] sm:leading-6 lg:text-2xl lg:leading-8 font-semibold',
 	textSubtitle: 'sm:text-[1.125rem] sm:leading-6 lg:text-2xl lg:leading-8 font-normal',
 	baseText: 'sm:text-base sm:leading-5 lg:text-[1.125rem] lg:leading-6 font-normal',
-	buttonStyleBase: 'sm:w-full flex justify-center xs:w-auto whitespace-nowrap text-white text-base leading-3 rounded-lg transition-all duration-500',
+	buttonStyleBase: 'sm:w-full flex justify-center xs:w-auto whitespace-nowrap text-white text-base leading-4 rounded-lg transition-all duration-500',
 	buttonStyleAccent: 'sm:w-full flex justify-center xs:w-auto whitespace-nowrap text-white text-[1.125rem] leading-[1.625rem] rounded-xl py-4.5 px-9 transition-all duration-500',
 }

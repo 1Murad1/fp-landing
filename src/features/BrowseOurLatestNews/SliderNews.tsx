@@ -29,4 +29,4 @@ export const SliderNews = React.memo(() => {
 	);
 });
 
-SliderNews.displayName = 'DarkenedSwiper';
+SliderNews.displayName = 'SliderNews';

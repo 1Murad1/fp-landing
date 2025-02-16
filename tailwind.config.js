@@ -7,6 +7,9 @@ export default {
     		width: {
     			'1/3-custom': 'calc(33.333% - 8px)',
     			'1/2-custom': 'calc(50% - 6px)',
+    			'1/2-custom': 'calc(50% - 6px)',
+					'33.333-custom': 'calc(33.333% - 6px)',
+					'66.666-custom': 'calc(66.666% - 6px)'
 					
     		},
 				maxWidth: {
@@ -24,7 +27,9 @@ export default {
     			darkTextMuted: '#707277',
     			darkBgPrimary: '#1D1C30',
     			lightBgPrimary: '#2A2942',
+    			lightBgPrimaryButton: '#141416',
     			darkBgSecondary: '#1A1B1D',
+					darkBgBorder: '#2F323C',
 					'violet':'rgb(149, 16, 165)',
     			bulletPrimary: '#C1CBDC',
     			background: 'hsl(var(--background))',
@@ -69,7 +74,7 @@ export default {
     			}
     		},
     		backgroundImage: {
-    			'dark-gradient': 'linear-gradient(180deg, #141416 0%, #000000 100%)'
+    			'dark-gradient': 'linear-gradient(180deg, #141416 0%, #000000 100%)',
     		},
     		backgroundColor: {
     			'red-20': 'rgba(255, 77, 0, 0.2)',
@@ -80,6 +85,7 @@ export default {
     			'black-40-alt': 'rgba(9, 9, 9, 0.4)',
     			'black-30-alt': 'rgba(4, 4, 4, 0.3)',
     			'black-40-cart': 'rgba(6, 5, 5, 0.4)',
+					'black-100-cart': 'rgba(10, 10, 10, 1)',
     			'dark-gradient': 'linear-gradient(180deg, #141416 0%, #000000 100%)',
 					'custom-gradient': 'linear-gradient(109.33% 196.79% at -16.9% 5%, #111111 0%, #381140 100%)'
 
@@ -90,9 +96,11 @@ export default {
     				'sans-serif'
     			]
     		},
+				
     	},
     	screens: {
     		sm: '320px',
+				xsm: '375px',
 				xs: '500px',
     		md: '768px',
     		lg: '1024px',

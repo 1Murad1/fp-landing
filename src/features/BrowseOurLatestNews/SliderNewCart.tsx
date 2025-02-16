@@ -10,7 +10,7 @@ interface ISliderNewCart {
 
 const SliderNewCart: FC<ISliderNewCart> = ({ cartInfo, customStyle }) => {
 	return (
-		<Link data-aos="fade-up" data-aos-delay={`${1000 + cartInfo.id * 100}`} to={cartInfo.link} className={`${customStyle} browse-cart-border p-5 rounded-2xl flex flex-col items-start gap-4 border-2 border-darkBgSecondary sm:min-h-[16.875rem] lg:min-h-[30rem]`}>
+		<Link data-aos="fade-up" data-aos-delay={`${500 + cartInfo.id * 100}`} to={cartInfo.link} className={`${customStyle} browse-cart-border p-5 rounded-2xl flex flex-col items-start gap-4 border-2 border-darkBgSecondary sm:min-h-[16.875rem] lg:min-h-[30rem]`}>
 			<span className='overflow-hidden rounded-xl flex'>
 				<img src={cartInfo.image} alt="new image cart" />
 			</span>
