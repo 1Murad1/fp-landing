@@ -62,7 +62,7 @@ const MobMenu: React.FC<MobMenuProps> = ({ customStyle, handleClose, open }) => 
 				<div className='flex items-stretch justify-between gap-x-2'>
 					{
 						SocialMediaData?.map((item) => (
-							<Link to={item.link} key={item.id} className='social-link bg-black-30-alt h-28 flex flex-1 items-center justify-center border-2 border-darkBgSecondary rounded-2xl'>
+							<Link onClick={handleClose} to={item.link} key={item.id} className='social-link bg-black-30-alt h-28 flex flex-1 items-center justify-center border-2 border-darkBgSecondary rounded-2xl'>
 								{item.icon}
 							</Link>
 						))
@@ -70,11 +70,11 @@ const MobMenu: React.FC<MobMenuProps> = ({ customStyle, handleClose, open }) => 
 					}
 				</div>
 				<div className='flex items-center gap-3 flex-wrap justify-center'>
-					<Link to='support' className={`${styles.baseText} text-darkTextMuted cursor-pointer`}>Support</Link>
+					<Link onClick={handleClose} to='support' className={`${styles.baseText} text-darkTextMuted cursor-pointer`}>Support</Link>
 					<span className='w-[1px] h-5 bg-darkTextMuted'></span>
-					<Link to='privacy-policy' className={`${styles.baseText} text-darkTextMuted cursor-pointer`}>Privacy Policy</Link>
+					<Link onClick={handleClose} to='privacy-policy' className={`${styles.baseText} text-darkTextMuted cursor-pointer`}>Privacy Policy</Link>
 					<span className='w-[1px] h-5 bg-darkTextMuted'></span>
-					<Link to='terms-of-service' className={`${styles.baseText} text-darkTextMuted cursor-pointer`}>Terms of Service</Link>
+					<Link onClick={handleClose} to='terms-of-service' className={`${styles.baseText} text-darkTextMuted cursor-pointer`}>Terms of Service</Link>
 				</div>
 			</div>
 		</div>
