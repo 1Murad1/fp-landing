@@ -25,7 +25,7 @@ function App() {
     Aos.init({
       duration: 1000,
       once: true,
-      offset: 100,
+      offset: 0,
       delay: 0,
     });
     return () => {
@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div className="App bg-dark-gradient min-h-screen text-white relative">
-      <div data-aos="fade-up" data-aos-delay="500" className="absolute top-0 left-0 right-0 z-0">
+      <div className="absolute top-0 left-0 right-0 z-0">
         <img className="sm:hidden xs:block w-full" src={ImageBgCustomDesktopLayer} alt="bg" />
         <img className="xs:hidden w-full" src={ImageBgCustomMobileLayer} alt="bg" />
       </div>

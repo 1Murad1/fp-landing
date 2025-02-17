@@ -14,8 +14,7 @@ import CustomBg from '@/assets/custom-bg.png'
 import CustomBg2 from '@/assets/custom-bg2.png'
 import CustomBgMob from '@/assets/custom-bg-bottom-mob.png'
 import { AboutUsNews } from '@/features/AboutUsNews/AboutUsNews';
-import ImageBgCustomDesktop from '@/assets/bg-custom-desk.png';
-import ImageBgCustomMobile from '@/assets/bg-custom-mobile.png';
+import { AnimatedLogo } from '@/components/AnimatedLogo';
 
 interface HomePageProps {
 	customStyle?: string
@@ -23,10 +22,10 @@ interface HomePageProps {
 
 export const HomePage: FC<HomePageProps> = React.memo(({ customStyle }) => (
 	<div className={`home-page ${customStyle} bg-[url('./assets/bg-elipse.png')] bg-no-repeat bg-center overflow-x-hidden`}>
-		<div data-aos="fade-up" data-aos-delay="500" className="absolute flex justify-center top-0 left-0 right-0 z-0">
-			<img className="sm:hidden xs:block" src={ImageBgCustomDesktop} alt="bg" />
-			<img className="xs:hidden" src={ImageBgCustomMobile} alt="bg" />
+		<div className='sm:h-[40rem] md:h-[59rem] absolute w-full'>
+			<AnimatedLogo />
 		</div>
+
 		<HeroSection customStyle='relative z-10' />
 		<DarkenedSwiper customStyle='sm:pb-[1.875rem] lg:pb-20 relative z-10' />
 		<LiquidityRewardsHub customStyle='sm:py-[1.875rem] lg:py-20 relative z-10' />
