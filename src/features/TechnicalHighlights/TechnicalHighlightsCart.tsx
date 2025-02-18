@@ -11,7 +11,7 @@ const TechnicalHighlightsCart: FC<TechnicalHighlightsCartProps> = ({ item }) => 
 	const getGradient = (itemId: number) => {
 		switch (itemId) {
 			case 1:
-				return 'linear-gradient(#111111, #111111) padding-box, radial-gradient(68.27% 122.89% at -16.59% 96.67%, #E984FB 0%, #5C2267 40.65%, #111111 100%) border-box';
+				return 'linear-gradient(#111111, #111111) padding-box, radial-gradient(109.33% 196.79% at -16.9% 5%, #E984FB 0%, #5C2267 40.65%, #0D0D0F 100%) border-box';
 			case 2:
 				return 'linear-gradient(#111111, #111111) padding-box, radial-gradient(109.33% 196.79% at -16.9% 5%, #111111 0%, #381140 100%) border-box';
 			case 3:
@@ -25,11 +25,13 @@ const TechnicalHighlightsCart: FC<TechnicalHighlightsCartProps> = ({ item }) => 
 			case 7:
 				return 'linear-gradient(#111111, #111111) padding-box, radial-gradient(109.33% 196.79% at -16.9% 5%, #381140 0%, #111111 100%) border-box';
 			case 8:
-				return 'linear-gradient(#111111, #111111) padding-box, radial-gradient(68.27% 122.89% at -16.59% 96.67%, #E984FB 0%, #5C2267 40.65%, #111111 100%) border-box';
+				return 'linear-gradient(#111111, #111111) padding-box, radial-gradient(99.46% 174.34% at 114.68% 118.04%, #E984FB 0%, #5C2267 40.65%, #0D0D0F 100%) border-box';
 			default:
 				return 'linear-gradient(#111111, #111111) padding-box, radial-gradient(68.27% 122.89% at -16.59% 96.67%, #E984FB 0%, #5C2267 40.65%, #111111 100%) border-box';
 		}
-	};
+	}
+
+
 	const { cardRef, isHovered, handleMouseMove, handleMouseEnter, handleMouseLeave, gradientStyle, mousePosition } = useHoverGradient({
 		defaultGradient:
 			getGradient(item.id),

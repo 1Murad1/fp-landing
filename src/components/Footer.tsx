@@ -64,8 +64,8 @@ export const Footer: React.FC<FooterProps> = React.memo(({ customStyle }) => {
 							<Link to='terms-of-service' className={`text-[0.6875rem] leading-3 transition-all duration-300 hover:text-white text-darkTextMuted cursor-pointer`}>Terms of Service</Link>
 						</div>
 					</div>
-					<div className='flex items-center gap-x-3.5 sm: flex-col gap-y-7 xs:flex-row'>
-						<Link to={'/'} className='inline-block min-w-32'>
+					<div className='flex items-center gap-x-3.5 sm:flex-col gap-y-7 xs:flex-row'>
+						<Link to={'/'} className='inline-block sm:max-w-[8.5rem] xs:min-w-36 '>
 							<img className='w-full' src={GooglePlay} alt="icon" />
 						</Link>
 						<Link to={'/'} className='inline-block min-w-32'>
