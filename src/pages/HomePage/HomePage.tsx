@@ -14,7 +14,6 @@ import CustomBg from '@/assets/custom-bg.png'
 import CustomBg2 from '@/assets/custom-bg2.png'
 import CustomBgMob from '@/assets/custom-bg-bottom-mob.png'
 import { AboutUsNews } from '@/features/AboutUsNews/AboutUsNews';
-import { AnimatedLogo } from '@/components/AnimatedLogo';
 import AnimationLogoCyclones from '@/components/AnimatedLogoCyclones';
 
 interface HomePageProps {
@@ -23,13 +22,10 @@ interface HomePageProps {
 
 export const HomePage: FC<HomePageProps> = React.memo(({ customStyle }) => (
 	<div className={`home-page ${customStyle} bg-[url('./assets/bg-elipse.png')] bg-no-repeat bg-center overflow-x-hidden`}>
-		<div className='sm:h-[40rem] md:h-[59rem] flex  w-full'>
-			<AnimationLogoCyclones />
-			<AnimatedLogo />
-		</div>
-		{/* <div className='sm:h-[40rem] md:h-[59rem] absolute w-full'>
 
-		</div> */}
+		<div className='sm:h-[40rem] md:h-[59rem] absolute w-full'>
+			<AnimationLogoCyclones />
+		</div>
 
 		<HeroSection customStyle='relative z-10' />
 		<DarkenedSwiper customStyle='sm:pb-[1.875rem] lg:pb-20 relative z-10' />
