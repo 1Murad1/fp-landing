@@ -15,13 +15,14 @@ const PARTICLE_SIZE = 0.012;
 const PARTICLE_COLOR = "purple";
 const ANIMATION_SPEED = 0.05;
 const WAYPOINT_RANDOMNESS = 0.02;
-const RANDOM_POSITION_RANGE = 5;
 const CYCLONE_PHASE_DURATION = 1;
 const CYCLONE_RADIUS = 3;
 const CYCLONE_STRENGTH = 2;
 const BOUNDARY_X = 4;
 const BOUNDARY_Y = 4;
 const BOUNDARY_Z = 0;
+const VOID_RADIUS = 0.2;
+const PUSH_STRENGTH = 0.1;
 
 const leftPart = [
   [new THREE.Vector3(-1, -0.5, 0), new THREE.Vector3(0, -1.5, 0)],
@@ -51,14 +52,10 @@ function generateDots() {
       const y = start.y + t * (end.y - start.y);
       const z = start.z + t * (end.z - start.z);
 
-      const randomPosition = new THREE.Vector3(
-        (Math.random() - 0.5) * RANDOM_POSITION_RANGE,
-        (Math.random() - 0.5) * RANDOM_POSITION_RANGE,
-        0
-      );
+      const startingPosition = new THREE.Vector3(0, 0, 0);
 
       dots.push({
-        position: randomPosition.clone(),
+        position: startingPosition.clone(),
         initial: new THREE.Vector3(x, y, z),
         startTime: Math.random() * 0.5,
         cyclonePhase: true,
@@ -148,6 +145,19 @@ const MovingDots = () => {
       dot.position.x = clamp(dot.position.x, -BOUNDARY_X, BOUNDARY_X);
       dot.position.y = clamp(dot.position.y, -BOUNDARY_Y, BOUNDARY_Y);
       dot.position.z = clamp(dot.position.z, -BOUNDARY_Z, BOUNDARY_Z);
+
+      const cursorX = state.pointer.x * 4;
+      const cursorY = state.pointer.y * 2.5;
+
+      const dx = dot.position.x - cursorX;
+      const dy = dot.position.y - cursorY;
+      const distanceToCursor = Math.sqrt(dx * dx + dy * dy);
+
+      if (distanceToCursor < VOID_RADIUS && cursorX !== 0 && cursorY !== 0) {
+        const pushFactor = (VOID_RADIUS - distanceToCursor) / VOID_RADIUS;
+        dot.position.x += (dx / distanceToCursor) * pushFactor * PUSH_STRENGTH;
+        dot.position.y += (dy / distanceToCursor) * pushFactor * PUSH_STRENGTH;
+      }
 
       positions[index] = dot.position.x;
       positions[index + 1] = dot.position.y;
