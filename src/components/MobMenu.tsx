@@ -24,24 +24,35 @@ const navigationData: INavigationData[] = [
 	{
 		id: 2,
 		path: 'support',
-		label: 'Support'
+		label: 'Help & Support'
 	},
 	{
 		id: 3,
-		path: 'governance',
-		label: 'Governance'
+		path: 'brand',
+		label: 'Brand'
 	},
 	{
 		id: 4,
+		path: 'legal',
+		label: 'Legal'
+	},
+	{
+		id: 5,
 		path: 'open-app',
 		label: 'Open app'
 	},
 	{
-		id: 5,
+		id: 6,
+		path: 'bug-bounty',
+		label: 'Bug Bounty'
+	},
+	{
+		id: 7,
 		path: 'docs',
 		label: 'Docs'
 	}
 ]
+
 
 const MobMenu: React.FC<MobMenuProps> = ({ customStyle, handleClose, open }) => {
 	return (

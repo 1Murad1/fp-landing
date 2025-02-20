@@ -23,20 +23,30 @@ const navigationData: INavigationData[] = [
 	{
 		id: 2,
 		path: 'support',
-		label: 'Support'
+		label: 'Help & Support'
 	},
 	{
 		id: 3,
-		path: 'governance',
-		label: 'Governance'
+		path: 'brand',
+		label: 'Brand'
 	},
 	{
 		id: 4,
+		path: 'legal',
+		label: 'Legal'
+	},
+	{
+		id: 5,
 		path: 'open-app',
 		label: 'Open app'
 	},
 	{
-		id: 5,
+		id: 6,
+		path: 'bug-bounty',
+		label: 'Bug Bounty'
+	},
+	{
+		id: 7,
 		path: 'docs',
 		label: 'Docs'
 	}
@@ -47,10 +57,10 @@ export const Footer: React.FC<FooterProps> = React.memo(({ customStyle }) => {
 	return (
 		<footer id='footer' className={`${customStyle} sm:py-[1.875rem] lg:py-14 relative z-10`}>
 			<div className={`${styles.container} flex flex-col sm:gap-y-16 lg:gap-y-20`}>
-				<div className='footer-nav-wrapper flex items-center justify-between gap-x-16 sm:flex-col md:flex-row gap-y-12'>
+				<div className='footer-nav-wrapper flex items-center justify-between sm:flex-col gap-y-7 lg:flex-row'>
 					<Logo />
-					<div className='flex gap-x-10 flex-wrap gap-y-7 justify-end sm:flex-col md:flex-row'>
-						<Navigation customStyle="footer-nav gap-x-10 sm:flex-col md:flex-row gap-y-7" navigationData={navigationData} />
+					<div className='flex gap-x-10  gap-y-7 flex-wra sm:flex-col md:flex-row flex-wrap sm:justify-center lg:justify-end'>
+						<Navigation customStyle="footer-nav gap-x-10 gap-y-7 sm:flex-col md:flex-row flex-wrap justify-center" navigationData={navigationData} />
 						<Button onClick={() => setIsOpen(true)} customStyle={`${styles.buttonStyleBase} px-5 py-3.5`} variant='primary' link={false} type="button">Sign up to newsletter</Button>
 					</div>
 

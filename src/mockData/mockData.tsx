@@ -24,7 +24,7 @@ import NewCartImage5 from '../assets/newCartImage5.png'
 import NewCartImage6 from '../assets/newCartImage6.png'
 import TwitterIcon from '@/components/svg/TwitterIcon'
 import TelegramIcon from '@/components/svg/TelegramIcon'
-import DiscordIcon from '@/components/svg/DiscordIcon'
+import MediumIcon from '@/components/svg/MediumIcon'
 import CertoraIcon from '@/components/svg/CertoraIcon'
 import SpearbitIcon from '@/components/svg/SpearbitIcon'
 import ForbesIcon from '../assets/icons/forbes.svg'
@@ -368,9 +368,9 @@ export const SocialMediaData: ISocialMediaData[] = [
 	},
 	{
 		id: 3,
-		icon: <DiscordIcon customStyle='group-hover:fill-violet transition-all duration-300' />,
+		icon: <MediumIcon customStyle='group-hover:fill-violet transition-all duration-300' />,
 		link: '',
-		linkText: 'Discord'
+		linkText: 'Medium'
 	},
 ]
 
@@ -757,9 +757,9 @@ export const guidesCartsData: IGuidesCartItem[] = [
 	},
 	{
 		id: 3,
-		title: 'Governance',
-		text: 'Community-driven governance.',
-		link: 'governance',
+		title: 'Legal',
+		text: 'Community-driven legal.',
+		link: 'legal',
 		icon: <LikeIcon />
 	},
 	{

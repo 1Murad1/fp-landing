@@ -22,7 +22,7 @@ const navigationData: INavigationData[] = [
 	{
 		id: 2,
 		path: 'support',
-		label: 'Support'
+		label: 'Help & Support'
 	},
 ]
 
