@@ -1,4 +1,4 @@
-import { useRef, useMemo } from "react";
+import { useRef, useMemo, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
@@ -21,8 +21,12 @@ const CYCLONE_STRENGTH = 2;
 const BOUNDARY_X = 4;
 const BOUNDARY_Y = 4;
 const BOUNDARY_Z = 0;
-const VOID_RADIUS = 0.2;
+const INITIAL_VOID_RADIUS = 0.2;
+const MAX_VOID_RADIUS = 0.4;
 const PUSH_STRENGTH = 0.1;
+const VOID_PROBABILITY = 0.2;
+const VOID_NOISE_SCALE = 0.5;
+const STATIONARY_TIME_THRESHOLD = 300;
 
 const leftPart = [
   [new THREE.Vector3(-1, -0.5, 0), new THREE.Vector3(0, -1.5, 0)],
@@ -71,9 +75,17 @@ function clamp(value: number, min: number, max: number) {
   return Math.max(min, Math.min(value, max));
 }
 
+function noise(x: number, y: number) {
+  return Math.sin(x * 10 + y * 10) * 0.5 + 0.5;
+}
+
 const MovingDots = () => {
   const particlesRef = useRef<THREE.Points>(null);
   const dots = useMemo(generateDots, []);
+
+  const [voidRadius, setVoidRadius] = useState(INITIAL_VOID_RADIUS);
+  const [lastCursorPosition, setLastCursorPosition] = useState({ x: 0, y: 0 });
+  const [lastMovementTime, setLastMovementTime] = useState(Date.now());
 
   const positions = useMemo(() => {
     const array = new Float32Array(dots.length * 3);
@@ -88,6 +100,25 @@ const MovingDots = () => {
   useFrame((state) => {
     if (!particlesRef.current) return;
     const positions = particlesRef.current.geometry.attributes.position.array;
+
+    const cursorX = (state.pointer.x * state.viewport.width) / 2;
+    const cursorY = (state.pointer.y * state.viewport.height) / 2;
+
+    const cursorMoved =
+      cursorX !== lastCursorPosition.x || cursorY !== lastCursorPosition.y;
+
+    if (cursorMoved) {
+      setVoidRadius(INITIAL_VOID_RADIUS);
+      setLastCursorPosition({ x: cursorX, y: cursorY });
+      setLastMovementTime(Date.now());
+    } else {
+      const currentTime = Date.now();
+      if (currentTime - lastMovementTime > STATIONARY_TIME_THRESHOLD) {
+        setVoidRadius((prevRadius) =>
+          Math.min(prevRadius + 0.001, MAX_VOID_RADIUS)
+        );
+      }
+    }
 
     dots.forEach((dot, i) => {
       const index = i * 3;
@@ -146,17 +177,21 @@ const MovingDots = () => {
       dot.position.y = clamp(dot.position.y, -BOUNDARY_Y, BOUNDARY_Y);
       dot.position.z = clamp(dot.position.z, -BOUNDARY_Z, BOUNDARY_Z);
 
-      const cursorX = state.pointer.x * 4;
-      const cursorY = state.pointer.y * 2.5;
-
       const dx = dot.position.x - cursorX;
       const dy = dot.position.y - cursorY;
       const distanceToCursor = Math.sqrt(dx * dx + dy * dy);
 
-      if (distanceToCursor < VOID_RADIUS && cursorX !== 0 && cursorY !== 0) {
-        const pushFactor = (VOID_RADIUS - distanceToCursor) / VOID_RADIUS;
-        dot.position.x += (dx / distanceToCursor) * pushFactor * PUSH_STRENGTH;
-        dot.position.y += (dy / distanceToCursor) * pushFactor * PUSH_STRENGTH;
+      const noiseValue = noise(dot.position.x, dot.position.y);
+      const distortedDistance = distanceToCursor * (1 + VOID_NOISE_SCALE * (noiseValue - 0.5));
+
+      const isCursorInInitial = cursorX === 0 && cursorY === 0;
+
+      if (distortedDistance < voidRadius && !isCursorInInitial) {
+        if (Math.random() < VOID_PROBABILITY) {
+          const pushFactor = (voidRadius - distortedDistance) / voidRadius;
+          dot.position.x += (dx / distanceToCursor) * pushFactor * PUSH_STRENGTH;
+          dot.position.y += (dy / distanceToCursor) * pushFactor * PUSH_STRENGTH;
+        }
       }
 
       positions[index] = dot.position.x;
