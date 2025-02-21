@@ -76,7 +76,7 @@ function clamp(value: number, min: number, max: number) {
 }
 
 function noise(x: number, y: number) {
-  return Math.sin(x * 10 + y * 10) * 0.5 + 0.5;
+  return Math.sin(x * 10 + y * 10) * 0.7 + 0.7;
 }
 
 const MovingDots = () => {
